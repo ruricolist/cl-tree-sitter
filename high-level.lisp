@@ -50,7 +50,7 @@
        (use-foreign-library ,cffi-name)
        (setf (gethash ',name *language-registry*)
              (lambda ()
-               (foreign-funcall ,fn-name ts-language)))
+               (foreign-funcall ,fn-name)))
        ',name)))
 
 (defun language-module (name)
